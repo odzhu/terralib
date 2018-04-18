@@ -15,6 +15,7 @@ module "infra" {
   associate_public_ip_address = "false"
   min_size                    = "${var.infra_node_count}"
   max_size                    = "${var.infra_node_count + 2}"
+  spot_price                  = "${var.infra_spot_price}"
 }
 
 data "template_file" "infra" {

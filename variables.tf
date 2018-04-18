@@ -44,6 +44,10 @@ variable "provisioner_name" {
   default = "provisioner"
 }
 
+variable "provisioner_spot_price" {
+  default = "0.10"
+}
+
 //<Master nodes variables
 variable "master_node_count" {
   default = "1"
@@ -63,6 +67,10 @@ variable "master_user_data" {
 
 variable "master_name" {
   default = "master"
+}
+
+variable "master_spot_price" {
+  default = "0.10"
 }
 
 //>Master nodes variables
@@ -89,6 +97,10 @@ variable "infra_name" {
   default = "infra"
 }
 
+variable "infra_spot_price" {
+  default = "0.10"
+}
+
 //>Infra nodes variables
 
 //<app nodes variables
@@ -111,6 +123,10 @@ variable "app_user_data" {
 
 variable "app_name" {
   default = "app"
+}
+
+variable "app_spot_price" {
+  default = "0.10"
 }
 
 //>app nodes variables

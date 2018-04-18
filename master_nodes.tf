@@ -15,6 +15,7 @@ module "master" {
   associate_public_ip_address = "false"
   min_size                    = "${var.master_node_count}"
   max_size                    = "${var.master_node_count + 2}"
+  spot_price                  = "${var.master_spot_price}"
 }
 
 data "template_file" "master" {

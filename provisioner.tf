@@ -12,6 +12,7 @@ module "provisioner" {
   load_balancers   = ["${aws_elb.master.name}"]
   user_data        = "${data.template_file.provisioner.rendered}"
   management_net   = "${var.management_net}"
+  spot_price       = "${var.provisioner_spot_price}"
 }
 
 data "template_file" "provisioner" {
